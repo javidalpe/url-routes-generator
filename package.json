@@ -1,0 +1,32 @@
+{
+  "name": "url-routes-generator",
+  "version": "1.0.0",
+  "description": "Simple URL routes generator in Javascript.",
+  "main": "generator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javidalpe/url-routes-generator.git"
+  },
+  "keywords": [
+    "javascript",
+    "url",
+    "routes",
+    "react-router",
+    "links"
+  ],
+  "author": "Javier Vidal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javidalpe/url-routes-generator/issues"
+  },
+  "homepage": "https://github.com/javidalpe/url-routes-generator#readme",
+  "dependencies": {
+    "path-to-regexp": "^2.2.1"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}
