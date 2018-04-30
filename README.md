@@ -12,7 +12,7 @@ This assumes you are using npm as your package manager.
 ## Usage
 First, register your routes:
 
-```
+```javascript
 import { uri } from "url-routes-generator";
 
 export const Routes = {
