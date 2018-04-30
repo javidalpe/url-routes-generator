@@ -11,6 +11,7 @@ This assumes you are using npm as your package manager.
 
 ## Usage
 First, register your routes:
+
 ```
 import { uri } from "url-routes-generator";
 
@@ -26,50 +27,51 @@ export const Routes = {
 Then, you can call the Routes object to get a valid URL.
 
 ### Get a route
+Print routes
 
 ```javascript
-console.log(Routes.home());
+console.log(Routes.home()); // /
+console.log(Routes.invoices()); // /invoices
+console.log(Routes.about()); // /about
 ```
 
-/
+Example usage with react-router Links
 
 ```javascript
-console.log(Routes.invoices());
+<Link to={Routes.about()}>About us</Link>
 ```
 
-/invoices
-
-```javascript
-console.log(Routes.about());
-```
-
-/about
 
 ### Get a route with params
+Print routes
 
 ```javascript
-console.log(Routes.invoice(23));
+console.log(Routes.invoice(23)); // /invoices/23
 ```
 
-/invoices/23
+Example usage with react-router Links
+
+```javascript
+<Link to={Routes.invoice(23)}>About us</Link>
+```
 
 ### Get a route with query params
+Print routes
 
 ```javascript
-console.log(Routes.invoices({orderBy:"date"));
+console.log(Routes.invoices({orderBy:"date")); // /about?orderBy=date
+console.log(Routes.invoice(23, {print:true, page: 2})); // /invoices/23?print=true&page=2
 ```
 
-/about?orderBy=date
+Example usage with react-router Redirect
 
 ```javascript
-console.log(Routes.invoice(23, {print:true, page: 2}));
+<Redirect to={Routes.about({source: "dashboard"})}/>
 ```
-
-/invoices/23?print=true&page=2
 
 ### Get the route pattern
 
-If you are using react-router, this is necessary to define the routes structure.
+If you are using react-router, you need to place `/invoices/:id` in the route definition. To get the route pattern, call the route with no params.
 
 ```javascript
 <Switch>
