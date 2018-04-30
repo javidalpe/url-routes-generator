@@ -4,7 +4,7 @@ A simple URL generator in Javascript.
 ## Installation
 To install the stable version:
 ```
-	npm install --save url-routes-generator
+npm install --save url-routes-generator
 ```
 
 This assumes you are using npm as your package manager.
@@ -24,54 +24,33 @@ export const Routes = {
 };
 ```
 
-Then, you can call the Routes object to get a valid URL.
+Then, you can call the Routes object to generate a valid URL.
 
-### Get a route
-Print routes
+### Generate a route
+Printing routes:
 
 ```javascript
 console.log(Routes.home()); // /
-console.log(Routes.invoices()); // /invoices
 console.log(Routes.about()); // /about
-```
-
-Example usage with react-router Links
-
-```javascript
-<Link to={Routes.about()}>About us</Link>
-```
-
-
-### Get a route with params
-Print routes
-
-```javascript
 console.log(Routes.invoice(23)); // /invoices/23
-```
-
-Example usage with react-router Links
-
-```javascript
-<Link to={Routes.invoice(23)}>About us</Link>
-```
-
-### Get a route with query params
-Print routes
-
-```javascript
+console.log(Routes.sendInvoice(23, 'hello@example.com')); // /invoices/23/sendto/hello@example.com
 console.log(Routes.invoices({orderBy:"date")); // /about?orderBy=date
 console.log(Routes.invoice(23, {print:true, page: 2})); // /invoices/23?print=true&page=2
 ```
 
-Example usage with react-router Redirect
+Example usage with react-router:
 
 ```javascript
+<Link to={Routes.about()}>About us</Link>
+<Link to={Routes.invoice(23)}>Invoice</Link>
 <Redirect to={Routes.about({source: "dashboard"})}/>
 ```
 
 ### Get the route pattern
 
-If you are using react-router, you need to place `/invoices/:id` in the route definition. To get the route pattern, call the route with no params.
+If you are using react-router, you need to place the route pattern (`/invoices/:id`) in the route definition. To get the route pattern, call the route with no params.
+
+Example:
 
 ```javascript
 <Switch>
