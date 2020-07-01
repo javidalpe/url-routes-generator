@@ -59,6 +59,9 @@ Example:
 </Switch>
 ```
 
+### Typescript
+Type declarations are included in the package.
+
 ### License
 
-The Laravel Idempotency is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

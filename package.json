@@ -1,8 +1,9 @@
 {
   "name": "url-routes-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple URL routes generator in Javascript.",
   "main": "generator.js",
+  "types": "generator.d.ts",
   "scripts": {
     "test": "jest"
   },
